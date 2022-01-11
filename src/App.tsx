@@ -12,9 +12,9 @@ interface User {
 
 function App() {
   const [users, setUsers] = useState<User[]>([] as User[]);
-  const [nome, setNome] = useState("");
-  const [idade, setIdade] = useState(0);
-  const [hobby, setHobby] = useState("");
+  const [nome, setNome] = useState<string>("");
+  const [idade, setIdade] = useState<number>(0);
+  const [hobby, setHobby] = useState<string>("");
 
   const handleSubmit = (nome: string, idade: number, hobby: string) => {
     const person = { nome, idade, hobby };
